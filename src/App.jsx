@@ -1,5 +1,6 @@
 import AppBar from './containers/appBar'
 import Buttons from './containers/buttons'
+import Tabs from './containers/tabs'
 import { Container } from "@suid/material"
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <>
         <AppBar />
         <Container>
-            <Buttons />
+            <Tabs />
         </Container>
     </>
   )
