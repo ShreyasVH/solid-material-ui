@@ -2,6 +2,7 @@ import { BottomNavigation, BottomNavigationAction, Box } from "@suid/material"
 import { createSignal } from "solid-js";
 import Buttons from "../buttons";
 import Table from '../table'
+import Loader from '../loader'
 
 export default function Tab () {
     const [value, setValue] = createSignal(0);
@@ -21,6 +22,7 @@ export default function Tab () {
                     <BottomNavigationAction label="Avatars" />
                     <BottomNavigationAction label="Checkboxes" />
                     <BottomNavigationAction label="Table" />
+                    <BottomNavigationAction label="Loader" />
                 </BottomNavigation>
 
                 <Box>
@@ -28,6 +30,7 @@ export default function Tab () {
                     {value() === 1 && <div>Avatars</div>}
                     {value() === 2 && <div>Checkboxes</div>}
                     {value() === 3 && <div><Table /></div>}
+                    {value() === 4 && <div><Loader /></div>}
                 </Box>
             </Box>
         </div>
