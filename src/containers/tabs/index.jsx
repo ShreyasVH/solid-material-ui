@@ -3,6 +3,7 @@ import { createSignal } from "solid-js";
 import Buttons from "../buttons";
 import Table from '../table'
 import Loader from '../loader'
+import CardComponent from '../card'
 
 export default function Tab () {
     const [value, setValue] = createSignal(0);
@@ -23,6 +24,7 @@ export default function Tab () {
                     <BottomNavigationAction label="Checkboxes" />
                     <BottomNavigationAction label="Table" />
                     <BottomNavigationAction label="Loader" />
+                    <BottomNavigationAction label="Card" />
                 </BottomNavigation>
 
                 <Box>
@@ -31,6 +33,7 @@ export default function Tab () {
                     {value() === 2 && <div>Checkboxes</div>}
                     {value() === 3 && <div><Table /></div>}
                     {value() === 4 && <div><Loader /></div>}
+                    {value() === 5 && <div><CardComponent /></div>}
                 </Box>
             </Box>
         </div>
