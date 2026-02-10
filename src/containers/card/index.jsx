@@ -3,7 +3,7 @@ import { Card, CardContent, CardActions, Typography, Button, Grid } from "@suid/
 export default function CardComponent () {
     return (
         <>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card raised sx={{ maxWidth: 345 }}>
                 <CardContent>
                     <Typography variant="h5" component="h5">
                         Basic Card
@@ -27,7 +27,7 @@ export default function CardComponent () {
 
             <br />
 
-            <Card sx={{ maxWidth: 300, textAlign: 'center' }}>
+            <Card raised sx={{ maxWidth: 300, textAlign: 'center' }}>
                 <CardContent>
                     <Typography variant="h5" component="h5">
                         Jack Kallis
