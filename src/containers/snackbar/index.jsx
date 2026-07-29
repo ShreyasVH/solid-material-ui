@@ -82,7 +82,6 @@ export default function SnackbarComponent (props) {
                         left: "50%",
                         transform: "translateX(-50%)",
                         "z-index": 2000,
-                        color: 'white',
                     }}
                 >
                     <Alert severity={type()} action={
