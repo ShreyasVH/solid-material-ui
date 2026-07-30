@@ -34,7 +34,15 @@ export default function LoaderComponent () {
 
             {
                 visible() && <div onClick={hideLoader}>
-                    <Dialog open={true} sx={{ "& .MuiDialog-paper": {
+                    <Dialog open={true} PaperProps={{
+                        sx: {
+                            backgroundColor: "transparent",
+                            backgroundImage: "none",
+                            boxShadow: "none",
+                            overflow: "visible"
+                        }
+                    }} sx={{
+                        "& .MuiBackdrop-root": {
                             backgroundColor: "transparent",
                             boxShadow: "none"
                         } }}>
