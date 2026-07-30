@@ -15,10 +15,7 @@ export default function Tab () {
                 <BottomNavigation
                     showLabels
                     value={value()}
-                    onChange={(event, newValue) => {
-                        console.log(newValue);
-                        setValue(newValue);
-                    }}
+                    onChange={(event, newValue) => setValue(newValue)}
                 >
                     <BottomNavigationAction label="Buttons" />
                     <BottomNavigationAction label="Avatars" />

@@ -14,17 +14,8 @@ export default function ThemeWrapper(params) {
     const [mode, setMode] = createSignal(prefersDarkMode ? 'dark' : 'light');
     const [theme, setTheme] = createSignal(null);
 
-    // const palette = createMemo(() =>
-    //     createPalette(getTheme(mode()))
-    // );
-    //
-    // const theme = createTheme({
-    //     palette
-    // });
-
     const toggleTheme = () => {
         setMode((prev) => {
-            console.log(prev);
             return (prev === "light" ? "dark" : "light")
         });
     };
