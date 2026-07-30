@@ -2,6 +2,7 @@ import { Button, Alert } from "@suid/material";
 import IconButton from "@suid/material/IconButton";
 import CloseIcon from "@suid/icons-material/Close";
 import { createSignal, onMount, onCleanup } from "solid-js";
+import './index.css';
 
 export default function SnackbarComponent (props) {
     const timeOut = props.hasOwnProperty('timeOut') ? props.timeOut : 5000;
@@ -82,9 +83,19 @@ export default function SnackbarComponent (props) {
                         left: "50%",
                         transform: "translateX(-50%)",
                         "z-index": 2000,
+                        "min-width": '300px'
                     }}
+                    class="snackbar"
                 >
-                    <Alert severity={type()} action={
+                    <div class={type()} style={{
+                        display: "flex",
+                        "align-items": "center",
+                        "justify-content": "space-between",
+                        gap: "16px",
+                        padding: "8px 16px",
+                    }} >
+                        {message()}
+
                         <IconButton
                             size="small"
                             color="inherit"
@@ -92,9 +103,7 @@ export default function SnackbarComponent (props) {
                         >
                             <CloseIcon fontSize="small" />
                         </IconButton>
-                    }>
-                        {message()}
-                    </Alert>
+                    </div>
                 </div>
             }
         </div>
