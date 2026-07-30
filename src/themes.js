@@ -76,7 +76,7 @@ const darkPalette = {
         secondary: 'rgba(255, 255, 255, 0.7)',
         selected: 'rgba(255, 255, 255, 0.16)'
     },
-    mode: 'dark',
+    mode: 'dark'
 };
 
 // const lightPalette = {
@@ -88,10 +88,7 @@ const darkPalette = {
 // };
 
 export const getTheme = (mode) => {
-    const theme = createTheme({
+    return createTheme({
         palette: ((mode() === 'light') ? lightPalette : darkPalette)
     });
-    console.log(theme);
-    console.log(JSON.stringify(theme.palette, null, ' '));
-    return theme;
 }
