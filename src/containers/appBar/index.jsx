@@ -13,6 +13,7 @@ import {
     ListItemText
 } from "@suid/material";
 import { createSignal } from "solid-js";
+import ThemeSelector from '../../components/themeSelector.jsx'
 
 function AppBarComponent() {
     const [ open, setOpen ] = createSignal(false);
@@ -36,6 +37,8 @@ function AppBarComponent() {
                         >
                             <MenuIcon />
                         </IconButton>
+
+                        <ThemeSelector />
                     </Toolbar>
                 </AppBar>
 
