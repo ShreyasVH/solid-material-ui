@@ -1,5 +1,5 @@
 import { Button, Stack, IconButton } from "@suid/material";
-import { Delete as DeleteIcon } from "@suid/icons-material";
+import DeleteIcon from "@suid/icons-material/Delete";
 
 export default function IconButtons () {
     return (

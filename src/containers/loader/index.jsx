@@ -41,11 +41,7 @@ export default function LoaderComponent () {
                             boxShadow: "none",
                             overflow: "visible"
                         }
-                    }} sx={{
-                        "& .MuiBackdrop-root": {
-                            backgroundColor: "transparent",
-                            boxShadow: "none"
-                        } }}>
+                    }}>
                         <CircularProgress />
                     </Dialog>
                 </div>

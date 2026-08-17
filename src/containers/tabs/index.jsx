@@ -5,6 +5,7 @@ import Table from '../table'
 import Loader from '../loader'
 import CardComponent from '../card'
 import SnackbarComponent from '../snackbar'
+import SearchSelectContainer from '../searchSelectContainer'
 
 export default function Tab () {
     const [value, setValue] = createSignal(0);
@@ -24,6 +25,7 @@ export default function Tab () {
                     <BottomNavigationAction label="Loader" />
                     <BottomNavigationAction label="Card" />
                     <BottomNavigationAction label="Snackbar" />
+                    <BottomNavigationAction label="SearchSelect" />
                 </BottomNavigation>
 
                 <Box>
@@ -34,6 +36,7 @@ export default function Tab () {
                     {value() === 4 && <div><Loader /></div>}
                     {value() === 5 && <div><CardComponent /></div>}
                     {value() === 6 && <div><SnackbarComponent /></div>}
+                    {value() === 7 && <div><SearchSelectContainer /></div>}
                 </Box>
             </Box>
         </div>
